@@ -13,19 +13,12 @@ export default function Pokemon({ pokomenData, setPokemonData }) {
    };
 
    const handleDecrement = (id) => {
-      const newPokomenData = pokomenData
-         .map((pokemon) => {
-            if (pokemon.id === id) {
-               const newCount = pokemon.count - 1;
-               if (newCount > 0) {
-                  return { ...pokemon, count: newCount };
-               }
-               return null;
-            }
-            return pokemon;
-         })
-         .filter((pokemon) => pokemon !== null);
-
+      const newPokomenData = pokomenData.map((pokemon) => {
+         if (pokemon.id === id && pokemon.count > 1) {
+            return { ...pokemon, count: pokemon.count - 1 };
+         }
+         return pokemon;
+      });
       setPokemonData(newPokomenData);
    };
 
@@ -78,16 +71,16 @@ export default function Pokemon({ pokomenData, setPokemonData }) {
                </div>
             </div>
          ))}
-         {pokomenData.length > 1 && (
-            <div>
+         <div>
+            {pokomenData.length > 1 && (
                <button
                   className="btn btn-danger w-100 mt-2"
                   onClick={() => setPokemonData([])}
                >
                   Delete all pokémons team
                </button>
-            </div>
-         )}
+            )}
+         </div>
       </div>
    );
 }
