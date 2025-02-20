@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { pokemonPicture } from "../../utils/helperFunctions";
 
 export default function Pokemon({ pokomenData, setPokemonData }) {
