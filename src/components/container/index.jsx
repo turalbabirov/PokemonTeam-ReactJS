@@ -8,7 +8,11 @@ import PkTable from "../pkTable";
 import pokomenData from "../../api/pokemon.json";
 
 export default function Container() {
-   const [team, setTeam] = useState([]);
+	const [team, setTeam] = useState([]);
+	
+	const getTotalCount = () => {
+		return team.reduce((total, pokemon) => total + pokemon.count, 0);
+	}
 
    return (
       <ContainerBS
@@ -49,7 +53,7 @@ export default function Container() {
                {team.length > 0 ? (
                   <>
                      <h2 className="mb-4">
-                        Total Pokémon in Team: {team.length}
+                        Total Pokémon in Team: {getTotalCount()}
                      </h2>
                      <h4 className="mb-4">Individual Pokémon Count</h4>
                      <div className="table-responsive">
