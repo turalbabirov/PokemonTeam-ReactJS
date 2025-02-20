@@ -1,4 +1,4 @@
-# � Pokémon Team Manager �
+# 🦸‍♂️ Pokémon Team Manager 🦸‍♀️
 
 ![GitHub stars](https://img.shields.io/github/stars/kullanici-adin/repo-adin?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/kullanici-adin/repo-adin?style=social)
@@ -40,21 +40,20 @@
 
 ---
 
-## � Installation
+## 💻 Installation
 
 To run the project locally, follow these steps:
 
 1. **Clone the repo:**
    ```bash
-# Clone the repository
-git clone https://github.com/kullanici-adin/repo-adin.git
+   # Clone the repository
+   git clone https://github.com/kullanici-adin/PokemonTeam-ReactJS.git
 
-# Navigate to the project directory
-cd repo-adin
+   # Navigate to the project directory
+   cd repo-adin
 
-# Install dependencies
-npm install
+   # Install dependencies
+   npm install
 
-# Start the project
-npm run dev
-
+   # Start the project
+   npm run dev
