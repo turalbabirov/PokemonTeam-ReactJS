@@ -78,16 +78,16 @@ export default function Pokemon({ pokomenData, setPokemonData }) {
                </div>
             </div>
          ))}
-         <div>
-            <button
-               className="btn btn-danger w-100 mt-2"
-               onClick={() => {
-                  setPokemonData([]);
-               }}
-            >
-               Delete all pokémons team
-            </button>
-         </div>
+         {pokomenData.length > 1 && (
+            <div>
+               <button
+                  className="btn btn-danger w-100 mt-2"
+                  onClick={() => setPokemonData([])}
+               >
+                  Delete all pokémons team
+               </button>
+            </div>
+         )}
       </div>
    );
 }
