@@ -20,7 +20,6 @@ export default function Pokemon({ pokomenData, setPokemonData }) {
                if (newCount > 0) {
                   return { ...pokemon, count: newCount };
                }
-               // count 0 veya daha düşükse, diziden kaldırın
                return null;
             }
             return pokemon;
